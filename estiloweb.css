@@ -1,5 +1,5 @@
 
-    
+     
     * {
     margin: 0;
     padding: 0;
@@ -140,4 +140,109 @@ footer li {
 .card img {
     width: 100%;
     border-radius: 8px;
+}
+/* Integrado con la paleta de estiloweb.css */
+body.trivia {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para apilar los elementos hacia abajo */
+    min-height: 100vh;
+}
+
+/* Franja horizontal superior para el título */
+body.trivia h1 {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Tarjeta de la trivia centrada abajo del título */
+.quiz-container {
+  background-color: #ffffff;
+    width: 90%;          
+    max-width: 1000px;   
+    margin: 20px auto;   
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+
+}
+#question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Contenedor de opciones */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+
+/* Botones de respuesta con la gama de tu menú/navegación */
+.options-container button {
+    background-color: #4ca1af;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.options-container button:hover:not(:disabled) {
+    background-color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* Estados de acierto y error */
+.options-container button.correct {
+    background-color: #27ae60 !important;
+    color: #ffffff;
+}
+
+.options-container button.incorrect {
+    background-color: #e74c3c !important;
+    color: #ffffff;
+}
+
+/* Botón Siguiente */
+#next-btn {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#next-btn:hover {
+    opacity: 0.9;
+}
+
+/* Pantalla de resultados */
+#result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 15px;
 }
